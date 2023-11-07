@@ -83,8 +83,7 @@ export async function scrapeAndStoreProduct(url: string) {
       highestPrice: Number(originalPrice) || Number(currentPrice),
       average: Number(currentPrice) || Number(originalPrice),
     };
-
-    return data;
+    console.log(data);
   } catch (error: any) {
     throw new Error(`Failed to scrape product: ${error.message}`);
   }
