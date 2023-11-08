@@ -1,5 +1,3 @@
-"use server";
-
 import mongoose from "mongoose";
 
 let isConnected = false; //Variable to track the connection status
@@ -14,7 +12,8 @@ export const connectToDB = async () => {
     await mongoose.connect(process.env.MONGODB_URI);
 
     isConnected = true;
-    console.log("MONGODB CONNECTED");
+
+    console.log("MongoDB Connected");
   } catch (error) {
     console.log(error);
   }
